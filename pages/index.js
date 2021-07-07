@@ -5,6 +5,8 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 import { getAllPosts } from '../pages/api/posts'
 import { BLOG_NAME } from '../lib/constants'
+import Intro_card from '../components/cards/intro-card'
+import Project_card from '../components/cards/project-card'
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
@@ -17,6 +19,8 @@ export default function Index({ allPosts }) {
             {BLOG_NAME}
           </title>
         </Head>
+        <Intro_card />
+        
         <Container>
           {heroPost && (
             <HeroPost
